@@ -1,0 +1,66 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1280px;
+}
+h3{
+    text-align: center;
+    flex-basis: 100%;
+}
+
+main{
+    padding: 20px;
+   
+}
+
+main section:first-child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main section:first-child section{
+    flex-basis: calc((100% - 16px)/ 2);
+}
+
+main > section:nth-of-type(2) h3{
+    text-align: left;
+}
+
+.getting-help section div{
+    background-image: url(../img/call.png);
+    background-position: center center;
+    background-size: cover;
+    padding-top: 176px;
+    background-repeat: no-repeat;
+}
+
+
+@media (min-width: 768px){
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main section:first-child section{
+        flex-basis: calc((100% - (16px * 3))/ 4);
+    }
+    main > section:nth-of-type(2){
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .getting-help{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .getting-help section:nth-of-type(1n+4){
+        flex-basis: calc((100% - 16px)/ 2);
+    }
+    .getting-help section {
+        flex-basis: calc((100% - 48px)/ 3);
+    }
+}
